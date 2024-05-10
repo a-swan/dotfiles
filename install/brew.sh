@@ -8,7 +8,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew update
 brew upgrade
-brew tap homebrew/cask
 
 echo "🍺 Homebrew installed successfully!"
 echo "🍺 Starting brew install..."
