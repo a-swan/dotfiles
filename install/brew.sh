@@ -4,6 +4,8 @@ echo "🍺 Starting Homebrew install..."
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(homebrew/bin/brew shellenv)"
+
 brew update
 brew upgrade
 brew tap homebrew/cask
