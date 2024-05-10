@@ -55,3 +55,4 @@ autoload -U +X bashcompinit && bashcompinit
 #eval "${pyenv init --path)"
 source $HOME/.dotfiles/.aliases
 export PATH="/usr/local/opt/curl/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
