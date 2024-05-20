@@ -18,6 +18,7 @@ defaults write com.apple.screencapture location /Users/alexswanson/Pictures/Scre
 defaults write com.apple.dock autohide -bool true
 
 # Set default browser
+# Set default darkmode
 ###############################################################################
 # Configure Trackpad and Mouse Settings
 ###############################################################################
