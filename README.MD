@@ -1,3 +1,5 @@
+# Issues
+- Brew install doesn't work outside of script
 ## Credits
 
 All credits for the scripts and ideas from [mihaliak dotfiles](https://github.com/mihaliak/dotfiles). Thanks!
