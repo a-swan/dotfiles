@@ -12,9 +12,19 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="robbyrussell"
 
 ZSH_DISABLE_COMPFIX=true
+
+# Configure ZSH Prompt
+autoload -Uz vcs_info
+precmd() { vcs_info }
+setopt prompt_subst
+
+zstyle ':vcs_info:git:*' formats '%b '
+
+PROMPT=' %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f%F{purple}⠠⠵%f '
 
 # Terraform Segment
 zsh_terraform() {
@@ -35,8 +45,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 autoload -U +X bashcompinit && bashcompinit
 source $HOME/.dotfiles/dots/.aliases
 export PATH="/usr/local/opt/curl/bin:$PATH"
@@ -44,3 +52,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

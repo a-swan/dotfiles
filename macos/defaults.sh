@@ -19,6 +19,7 @@ defaults write com.apple.dock autohide -bool true
 
 # Set default browser
 # Set default darkmode
+
 ###############################################################################
 # Configure Trackpad and Mouse Settings
 ###############################################################################
@@ -30,6 +31,7 @@ defaults write com.apple.AppleMultitouchTrackpad.plist Clicking 1
 ###############################################################################
 # Disable annoying 'features'
 ###############################################################################
+# Disable 'do you want to quit' message
 # Disable 'Are you sure you want to open this application?' dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
