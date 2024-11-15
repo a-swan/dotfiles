@@ -13,6 +13,8 @@ echo "🍺 Homebrew installed successfully!"
 echo "🍺 Starting brew install..."
 
 # Install command-line tools using Homebrew
+brew install aws-cdk
+brew install awscli
 brew install git
 brew install go
 brew install k9s
