@@ -37,3 +37,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+
+# Disable DS_Store on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Disable DS_Store on USB volumes
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
