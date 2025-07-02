@@ -14,3 +14,5 @@ Many thanks to the [dotfiles community](http://dotfiles.github.io/) and the crea
 # Github/lab configuration guides
 - [SSH configuration](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 - [GPG configuraiton](https://docs.github.com/en/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)
+
+few more changes
