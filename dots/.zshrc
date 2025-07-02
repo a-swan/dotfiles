@@ -31,7 +31,7 @@ zsh_terraform() {
     # break if there is no .terraform directory
     if [[ -d .terraform ]]; then
         local tf_workspace=$(/usr/local/bin/terraform workspace show)
-	echo -n "$tf_workspace"
+	      echo -n "$tf_workspace"
     fi
 }
 
@@ -60,3 +60,21 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Git GPG signing
+# https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
+if [ -r ~/.zshrc ]; then
+  echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zshrc;
+else 
+  echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zprofile;
+fi
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
+
+export GPG_TTY=$(tty)
