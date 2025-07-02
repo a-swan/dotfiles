@@ -29,6 +29,7 @@ brew install zsh
 brew install zsh-completions
 brew install zsh-syntax-highlighting
 brew install dockutil
+brew install gpg
 
 echo "🍺 Brew install complete!"
 echo "🍺 Starting cask install..."
