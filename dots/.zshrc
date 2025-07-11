@@ -38,9 +38,9 @@ zsh_terraform() {
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-plugins=(
-	zsh-autosuggestions
-)
+#plugins=(
+#	zsh-autosuggestions
+#)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,22 +59,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Git GPG signing
-# https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key
-if [ -r ~/.zshrc ]; then
-  echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zshrc;
-else 
-  echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zprofile;
-fi
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
-export GPG_TTY=$(tty)
-
 export GPG_TTY=$(tty)

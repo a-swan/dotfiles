@@ -16,6 +16,7 @@ echo "🍺 Starting brew install..."
 brew install aws-cdk
 brew install awscli
 brew install git
+brew install gh
 brew install go
 brew install k9s
 brew install kubernetes-cli
