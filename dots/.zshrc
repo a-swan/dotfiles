@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 autoload -U +X bashcompinit && bashcompinit
 source $HOME/.dotfiles/dots/.aliases
-export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$(go env GOPATH)/bin:$PATH"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -63,3 +63,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Git GPG signing
 export GPG_TTY=$(tty)
+
+# Load private environment variables if the exist
+if [ -f "$HOME/.zshrc.local" ]; then
+  source "$HOME/.zshrc.local"
+fi
