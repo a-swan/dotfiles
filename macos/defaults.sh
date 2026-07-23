@@ -12,7 +12,7 @@
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Set default screenshot folder
-defaults write com.apple.screencapture location /Users/alexswanson/Pictures/Screenshots
+defaults write com.apple.screencapture location /Users/alex/Pictures/Screenshots
 
 # Set autohide for Dock
 defaults write com.apple.dock autohide -bool true
