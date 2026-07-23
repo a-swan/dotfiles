@@ -1,0 +1,31 @@
+# source antidote
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+
+# initialize plugins
+antidote load
+
+# Configure ZSH Prompt
+PROMPT=' %F{blue}%~%f %F{purple}⠠⠵%f '
+
+# User configuration
+autoload -U +X bashcompinit && bashcompinit
+source $HOME/.dotfiles/dots/.aliases
+export PATH="/usr/local/opt/curl/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# NVM Configuration
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+# Git GPG signing
+export GPG_TTY=$(tty)
+
+# Command navigation
+# Option + Left/Right arrow to jump words backward/forward
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word
+
+# Option + Delete to delete backward word
+bindkey "^[^?" backward-kill-word
+bindkey "^[^H" backward-kill-word
